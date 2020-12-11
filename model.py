@@ -13,11 +13,11 @@ from sklearn.metrics import accuracy_score
 
 
 
-df = pd.read_csv("data/churn.csv", index_col = 0)
-#df = pd.read_csv("/Users/user/PycharmProjects/pythonProject5/12_hafta/kredi/churn_deployment/data/churn.csv", index_col = 0)
+#df = pd.read_csv("data/churn.csv", index_col = 0)
+df = pd.read_csv("/Users/user/PycharmProjects/pythonProject5/12_hafta/churn_deployment/data/churn.csv", index_col = 0)
 pd.pandas.set_option("display.max_columns", None)
 df.head()
-df = df.drop(["CustomerId","Surname","Geography","NumOfProducts"] , axis = 1)
+df = df.drop(["CustomerId","Surname","Geography","NumOfProducts","CreditScore"] , axis = 1)
 
 df.loc[df.Gender == "Female" , "Gender"] = 1
 df.loc[df.Gender == "Male" , "Gender"] = 0
