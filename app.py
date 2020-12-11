@@ -39,7 +39,7 @@ def predict():
 
 
     # html çıktısına geri gondermek
-    return render_template('template.html', prediction_text='Predicted Churn : {}'.format( "Bu müşteri kaybedilecek , Dikkat! "if predicted_y == 1 else "Kaybedilmeyecek müşteri."))
+    return render_template('template.html', prediction_text='Müşteri Kayıp Tahmini  : {}'.format( "Bu müşteri kaybedilecek , Dikkat! "if predicted_y == 1 else "Sadık müşteri."))
 
 
 
